@@ -1,0 +1,57 @@
+{
+  "name": "dsh-work-heatmap",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 工作热力图插件：扫描本地会话日志，按天聚合 Token 消耗 / Agent 步数 / 工具调用 / 提示次数，在会话首屏输入框下方渲染 GitHub 贡献图风格的行为方块",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "docs/preview.png",
+    "docs/preview-light.png"
+  ],
+  "license": "MIT",
+  "author": "Huyuchuan",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "heatmap",
+    "contribution-graph",
+    "activity",
+    "tokens",
+    "热力图"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huyuchuan/dsh-work-heatmap.git"
+  },
+  "homepage": "https://github.com/Huyuchuan/dsh-work-heatmap#readme",
+  "bugs": {
+    "url": "https://github.com/Huyuchuan/dsh-work-heatmap/issues"
+  },
+  "engines": {
+    "dsh": "^0.2.2-rc.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

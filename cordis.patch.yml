@@ -1,0 +1,7 @@
+# dsh-work-heatmap bundle patch：把插件行插入目标 profile。
+# 用法（二选一）：
+#   1) 在 profile 的 package.json 里把 dsh-work-heatmap 加入 dsh.profile.bundles；
+#   2) 直接把下面两行贴进 profile 的 cordis.patch.yml。
+- insert:
+    - id: dsh-work-heatmap
+      name: 'dsh-work-heatmap'
